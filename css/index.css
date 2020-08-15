@@ -1,5 +1,6 @@
 @import './_base.css';
 @import './_typography.css';
+@import './_spacing.css';
 
 p,
 .tmpl-post li,
@@ -73,21 +74,17 @@ p,
 }
 
 /* Posts list */
-.postlist {
+ol.postlist {
   list-style: none;
-  padding: 0;
+  margin: var(--space-unit-four) 0;
 }
+
 .postlist-item {
+  margin: 0 0 var(--space-unit-sixteen) 0;
 }
-.postlist-date {
-}
-.postlist-link {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.25em 0.1875em; /* 4px 3px /16 */
-}
-.postlist-item-active .postlist-link {
-  font-weight: bold;
+
+.postlist-item h3 {
+  margin: 0 0 var(--space-unit-two) 0;
 }
 
 /* Tags */

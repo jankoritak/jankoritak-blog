@@ -56,6 +56,13 @@
   --btn-primary-label: var(--white);
 
   /* Sizing */
+  --space-unit-half: calc(var(--space-unit-one) / 2); /* 2px */
+  --space-unit-one: calc(1em/4); /* 4px */
+  --space-unit-two: calc(var(--space-unit-one) * 2); /* 8px */
+  --space-unit-four: calc(var(--space-unit-one) * 4); /* 16px */
+  --space-unit-eight: calc(var(--space-unit-one) * 8); /* 32px */
+  --space-unit-sixteen: calc(var(--space-unit-one) * 16); /* 64px */
+
   --maxWidth: 35rem;
 }
 
