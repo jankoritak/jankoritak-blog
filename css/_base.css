@@ -12,12 +12,10 @@
   /*
    * Primary: Used for the links, the button background color, etc. In general, it’s the main call-to-action color.
    */
-  --color-primary: #2a9d8f;
-  --color-primary-darker: #238579; /* 15% darker */
-  --color-primary-lighter: #33c1b0; /* 15% lighter */
+  --color-primary: #fca311;
 
   /* Secondary */
-  --color-secondary: #264653;
+  --color-secondary: black;
 
   --black: #1d1d21;
   --gray-10: #2e2e31;
@@ -76,10 +74,6 @@ body {
   background-color: var(--white);
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
 pre,
 code {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
@@ -119,10 +113,6 @@ main {
   margin: 0 auto;
   max-width: var(--maxWidth);
   padding: 1rem 0;
-}
-
-header {
-  border-bottom: 1px dashed var(--gray-4);
 }
 
 header:after {
