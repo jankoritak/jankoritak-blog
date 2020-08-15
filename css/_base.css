@@ -1,12 +1,61 @@
+/*
+ * Notes:
+ * What semantic elements will be used the most?
+ * - h1 ... h6
+ * - p
+ * - pre
+ * - code
+ * - img
+ */
+
 :root {
-  --red: #C5004A;
-  --darkred: #7F0036;
-  --lightgray: #e0e0e0;
-  --gray: #C0C0C0;
-  --darkgray: #333;
-  --navy: #17050F;
-  --blue: #082840;
-  --white: #fff;
+  /*
+   * Primary: Used for the links, the button background color, etc. In general, it’s the main call-to-action color.
+   */
+  --color-primary: #2a9d8f;
+  --color-primary-darker: #238579; /* 15% darker */
+  --color-primary-lighter: #33c1b0; /* 15% lighter */
+
+  /* Secondary */
+  --color-secondary: #264653;
+
+  --black: #1d1d21;
+  --gray-10: #2e2e31;
+  --gray-6: #7b7a7d;
+  --gray-4: #a5a5a6;
+  --gray-3: #bbbbbc;
+  --gray-2: #d1d0d2;
+  --gray-1: #e8e7e8;
+  --white: white;
+
+  /* Feedback */
+  --color-success: #88c459;
+  --color-error: #f5414f;
+  --color-warning: #ffd137;
+
+  /* Typography */
+  --color-text: var(--gray-10);
+  --color-text-heading: var(--black);
+  --color-text-subtle: var(--gray-6);
+  --color-link: var(--color-primary);
+  /* --color-link-visited: var(--color-primary-dark); */
+  /* --color-mark: var(--color-accent-bg); */
+  --color-blockquote-border: var(--gray-2);
+
+  --font-sans: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  --font-mono: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace;
+
+  /* Border */
+  --color-border: var(--gray-2);
+
+  /* Body */
+  --color-body: var(--white);
+
+  /* Buttons */
+  --btn-primary-bg: var(--color-primary);
+  /* --btn-primary-hover: var(--color-primary-light); */
+  /* --btn-primary-active: var(--color-primary-dark); */
+  --btn-primary-label: var(--white);
 
   /* Sizing */
   --maxWidth: 35rem;
@@ -20,22 +69,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  color: var(--darkgray);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
   background-color: var(--white);
 }
 
 p:last-child {
   margin-bottom: 0;
-}
-
-table {
-  margin: 1em 0;
-}
-
-table td,
-table th {
-  padding-right: 1em;
 }
 
 pre,
@@ -64,11 +106,13 @@ pre {
   background-color: #f6f6f6;
 }
 
-a[href] {
-  color: var(--blue);
+a {
+  color: var(--black);
+  transition: color 100ms ease-out;
 }
-a[href]:visited {
-  color: var(--navy);
+
+a:hover {
+  color: var(--color-primary)
 }
 
 main {
@@ -78,7 +122,7 @@ main {
 }
 
 header {
-  border-bottom: 1px dashed var(--lightgray);
+  border-bottom: 1px dashed var(--gray-4);
 }
 
 header:after {
