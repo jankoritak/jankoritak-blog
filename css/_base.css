@@ -63,7 +63,7 @@
   --space-unit-eight: calc(var(--space-unit-one) * 8); /* 32px */
   --space-unit-sixteen: calc(var(--space-unit-one) * 16); /* 64px */
 
-  --maxWidth: 35rem;
+  --maxWidth: 40rem;
 }
 
 * {
@@ -120,6 +120,10 @@ main {
   margin: 0 auto;
   max-width: var(--maxWidth);
   padding: 1rem 0;
+}
+
+header {
+  border-bottom: 1px dashed var(--black)
 }
 
 header:after {

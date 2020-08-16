@@ -76,15 +76,17 @@ p,
 /* Posts list */
 ol.postlist {
   list-style: none;
-  margin: var(--space-unit-four) 0;
+  margin: var(--space-unit-eight) 0;
 }
 
 .postlist-item {
-  margin: 0 0 var(--space-unit-sixteen) 0;
+  margin: 0 0 var(--space-unit-four) 0;
 }
 
-.postlist-item h3 {
-  margin: 0 0 var(--space-unit-two) 0;
+.postlist-item h2 {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0 0 var(--space-unit-two) var(--space-unit-two);
 }
 
 /* Tags */
