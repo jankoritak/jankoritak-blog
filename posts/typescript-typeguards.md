@@ -67,9 +67,9 @@ However, TypeScript recognizes this as an error. Why? Object types in TypeScript
 
 There are couple ways to resolve our issue.
 
-### Alter the type declaration
+### Specify the type declaration
 
-The easiest solution to this would be altering the type itself to our needs. Explicitly declaring that Saturn does not have water with `water: undefined`.
+The easiest solution to this would be specifying the type declaration itself. When we explicitly declare that Saturn does not have water with `water: undefined`, we reach exhaustiveness. The compiler now knows that type `Planet` has type `water: Water | undefined`.
 
 ```typescript
   type Saturn = {
@@ -79,7 +79,7 @@ The easiest solution to this would be altering the type itself to our needs. Exp
   }
 ```
 
-But not always, you can do that. The type might be a (generated) descriptor of data received from an `API`.
+That's semantically correct, however not always possible. The type might be a third-party (generated) library or API definition, in which case, our hands are tied and this solution is a no-go.
 
 ### Assert the type in place
 
@@ -100,6 +100,8 @@ Property 'water' does not exist on type 'Planet'.
 ```
 
 This gets us rid of only one error though. How come?
+
+https://github.com/microsoft/TypeScript/issues/12815#issuecomment-266250230
 
 ### Use Type Guards
 
