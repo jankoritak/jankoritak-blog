@@ -1,7 +1,7 @@
 ---
 title: Narrowing Union Types
-description: This is a post on My Blog about agile frameworks. This is a post on My Blog about agile frameworks. This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+description: Narrowing Union Types
+date: 2020-08-17
 tags:
   - Typescript
 layout: layouts/post.njk
